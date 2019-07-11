@@ -24,7 +24,7 @@ subplot(3,1,3);
 outpic = imfilter(inpic,outpic,'symmetric'); 
 imshow(abs(outpic)); % Show Filtered brodatz img
 %% K Means Image Segmentation
-% No kmeans of image function in my older version of matlab, using old k means
+% No kmeans of image function in 2015b, using older implementation
 % and a contour plot
 k = kmeans(im2double(outpic(:)),5);
 k = reshape(k,size(outpic));
